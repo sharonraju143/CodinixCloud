@@ -1,0 +1,6 @@
+Observations:
+
+1. Even if the min and max nodes are above "0" still when you execute the pipeline and check the cluster it is still shown as
+   single node 
+
+2. Even if the Vm_size is not compatible with the Datbricks_Spark_version the pipeline will be executed but you will see in the portal that the Vm-size is not compatible

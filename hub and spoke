@@ -1,0 +1,108 @@
+terraform {
+
+  required_version = ">=0.12"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>2.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {}
+}
+
+locals {
+    prefix-hub         = "hub"
+    hub-location       = "Central India"
+    hub-resource-group = "hub-RG"
+}
+
+resource "azurerm_resource_group" "hub-RG" {
+    name     = local.hub-resource-group
+    location = local.hub-location
+}
+
+resource "azurerm_virtual_network" "Hub-vnet" {
+    name                = "Hub-vnet"
+    location            = azurerm_resource_group.hub-RG.location
+    resource_group_name = azurerm_resource_group.hub-RG.name
+    address_space       = ["10.0.0.0/16"]
+
+    tags = {
+    environment = "hub-spoke"
+    }
+}
+
+resource "azurerm_subnet" "hub-subnet" {
+    name                 = "AzureFirewallSubnet"
+    resource_group_name  = azurerm_resource_group.hub-RG.name
+    virtual_network_name = azurerm_virtual_network.Hub-vnet.name
+    address_prefixes     = ["10.0.1.0/24"]
+}
+
+
+locals {
+    spoke1-location       = "Central India"
+    spoke1-resource-group = "spoke1-RG"
+    prefix-spoke1         = "spoke1"
+}
+
+resource "azurerm_resource_group" "spoke1-RG" {
+    name     = local.spoke1-resource-group
+    location = local.spoke1-location
+}
+
+resource "azurerm_virtual_network" "Spoke1-vnet" {
+    name                = "Spoke1-vnet"
+    location            = azurerm_resource_group.spoke1-RG.location
+    resource_group_name = azurerm_resource_group.spoke1-RG.name
+    address_space       = ["10.2.0.0/16"]
+
+    tags = {
+    environment = "hub-spoke"
+    }
+}
+
+resource "azurerm_subnet" "spoke1-work-subnet" {
+    name                 = "spoke1-work-subnet"
+    resource_group_name  = azurerm_resource_group.spoke1-RG.name
+    virtual_network_name = azurerm_virtual_network.Spoke1-vnet.name
+    address_prefixes     = ["10.2.0.0/24"]
+}
+
+
+locals {
+    spoke2-location       = "Central India"
+    spoke2-resource-group = "spoke2-RG"
+    prefix-spoke2         = "spoke2"
+}
+
+resource "azurerm_resource_group" "spoke2-RG" {
+    name     = local.spoke2-resource-group
+    location = local.spoke2-location
+}
+
+resource "azurerm_virtual_network" "Spoke2-vnet" {
+    name                = "Spoke2-vnet"
+    location            = azurerm_resource_group.spoke2-RG.location
+    resource_group_name = azurerm_resource_group.spoke2-RG.name
+    address_space       = ["10.3.0.0/16"]
+
+    tags = {
+    environment = "hub-spoke"
+    }
+}
+
+resource "azurerm_subnet" "spoke2-work-subnet" {
+    name                 = "spoke2-work-subnet"
+    resource_group_name  = azurerm_resource_group.spoke2-RG.name
+    virtual_network_name = azurerm_virtual_network.Spoke2-vnet.name
+    address_prefixes     = ["10.3.0.0/24"]
+}
+
+
+
+

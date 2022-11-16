@@ -1,0 +1,47 @@
+Standard
+
+11.2.x-scala2.12
+11.1.x-scala2.12
+11.0.x-scala2.12
+10.5.x-scala2.12
+10.4.x-scala2.12
+9.1.x-scala2.12
+7.3.x-scala2.12
+
+ML
+
+11.2.x-gpu-ml-scala2.12- Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                         Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+
+11.2.x-cpu-ml-scala2.12- 
+
+11.1.x-gpu-ml-scala2.12-Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                        Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+
+11.1.x-cpu-ml-scala2.12-
+
+
+11.0.x-gpu-ml-scala2.12-Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                         Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+
+
+11.0.x-cpu-ml-scala2.12-
+
+ 
+10.5.x-gpu-ml-scala2.12-Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                        Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+10.5.x-cpu-ml-scala2.12-
+
+
+9.1.x-gpu-ml-scala2.12-Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                        Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+
+
+9.1.x-gpu-ml-scala2.12-
+
+
+7.3.x-gpu-ml-scala2.12-Standard_NC6s_v3, Standard_NC12s_v3, Standard_NC24s_v3, Standard_NC4as_T4_v3, Standard_NC8as_T4_v3,
+                       Standard_NC16as_T4_v3,Standard_NC64as_T4_v3
+7.3.x-cpu-ml-scala2.12
+
+

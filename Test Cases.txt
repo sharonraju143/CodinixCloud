@@ -1,0 +1,24 @@
+RG  RG-03
+Workspace:  Workspace
+Cluster Name:  cluster-06
+Location  eastus
+Spark Ver  9.1.x-scala2.12
+Min Worker  2
+Max Worker  8
+
+Error: Error 404 The workspace with resource ID /subscriptions/047ca710-067e-4a60-8ce6-494268568149/resourceGroups/RG-03/providers/Microsoft.Databricks/workspaces/Workspace could not be found.
+
+
+
+RG  RG-01
+Workspace:  Workspace
+Cluster Name:  cluster-01
+Location  australiaeast
+Spark Ver  7.3.x-scala2.12
+Min Worker  2
+Max Worker  8
+SKU  Standard
+Cluster is MultiMode:  True
+
+Error: Error 404 The workspace with resource ID /subscriptions/047ca710-067e-4a60-8ce6-494268568149/resourceGroups/RG-01/providers/Microsoft.Databricks/workspaces/Workspace could not be found.
+
